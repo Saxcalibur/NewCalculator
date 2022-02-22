@@ -14,7 +14,8 @@ public class Calculator implements ActionListener {
     JButton decButton, equButton, delButton, clrButton, negButton;
     JPanel panel;
 
-    Font myFont = new Font("Some Bold Font", Font.BOLD, 30);
+    Font buttonFont = new Font("Some Bold Font", Font.BOLD, 30);
+    Font textFieldFont = new Font("Some Bold Font", Font.BOLD, 50);
 
     double num1 = 0;
     double num2 = 0;
@@ -24,12 +25,12 @@ public class Calculator implements ActionListener {
     Calculator() {
         frame = new JFrame("Calculator");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(420, 560);
+        frame.setSize(345, 540);
         frame.setLayout(null);
 
         textField = new JTextField();
-        textField.setBounds(50, 25, 310, 50);
-        textField.setFont(myFont);
+        textField.setBounds(10, 15, 310, 75);
+        textField.setFont(textFieldFont);
 
         addButton = new JButton("+");
         subButton = new JButton("-");
@@ -53,22 +54,22 @@ public class Calculator implements ActionListener {
 
         for (int i = 0; i < 9; i++) {
             functionButtons[i].addActionListener(this);
-            functionButtons[i].setFont(myFont);
+            functionButtons[i].setFont(buttonFont);
             functionButtons[i].setFocusable(false);
         }
         for (int i = 0; i < 10; i++) {
             numberButtons[i] = new JButton(String.valueOf(i));
             numberButtons[i].addActionListener(this);
-            numberButtons[i].setFont(myFont);
+            numberButtons[i].setFont(buttonFont);
             numberButtons[i].setFocusable(false);
         }
 
-        delButton.setBounds(50, 430, 93, 70);
-        clrButton.setBounds(158, 430, 93, 70);
-        negButton.setBounds(267, 430, 93, 70);
+        delButton.setBounds(10, 420, 93, 70);
+        clrButton.setBounds(118, 420, 93, 70);
+        negButton.setBounds(227, 420, 93, 70);
 
         panel = new JPanel();
-        panel.setBounds(50, 100, 310, 310);
+        panel.setBounds(10, 100, 310, 310);
         panel.setLayout(new GridLayout(4, 4, 10, 10));
 
         panel.add(numberButtons[1]);
