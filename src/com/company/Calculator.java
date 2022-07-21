@@ -33,6 +33,8 @@ public class Calculator implements ActionListener {
         textField.setFont(textFieldFont);
 
         addButton = new JButton("+");
+//        addButton.setBackground(new Color(0x00));
+//        addButton.setForeground(new Color(0xDA0C5B));
         subButton = new JButton("-");
         mulButton = new JButton("*");
         divButton = new JButton("/");
@@ -41,6 +43,7 @@ public class Calculator implements ActionListener {
         delButton = new JButton("CE");
         clrButton = new JButton("C");
         negButton = new JButton("(-)");
+
 
         functionButtons[0] = addButton;
         functionButtons[1] = subButton;
